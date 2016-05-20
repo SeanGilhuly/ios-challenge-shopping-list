@@ -22,7 +22,7 @@ class ShoppingListTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     //MARK:  IBActions
@@ -47,14 +47,7 @@ class ShoppingListTableViewController: UITableViewController {
         alertController.addAction(cancelAction)
         presentViewController(alertController, animated: true, completion: nil)
     }
-    
-    func updateButton(isComplete: Bool) {
-        if isComplete {
-            isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
-        } else {
-            isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
-        }
-    }
+
 
     
 
@@ -67,12 +60,12 @@ class ShoppingListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("addItem", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("addItem", forIndexPath: indexPath) as? ButtonTableViewCell ?? ButtonTableViewCell()
 
         // Configure the cell...
         
         let item = ShoppingController.sharedController.items[indexPath.row]
-        cell.textLabel?.text = item.name
+        cell.itemLabelText.text = item.name
 
         return cell
     }

@@ -17,6 +17,7 @@
 		8BE291971CEF63120010D99A /* ShoppingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291961CEF63120010D99A /* ShoppingController.swift */; };
 		8BE291B01CEF6EF00010D99A /* Shopping+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291AE1CEF6EF00010D99A /* Shopping+CoreDataProperties.swift */; };
 		8BE291B11CEF6EF00010D99A /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291AF1CEF6EF00010D99A /* Shopping.swift */; };
+		8BE291B61CEF87CE0010D99A /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291B51CEF87CE0010D99A /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8BE291961CEF63120010D99A /* ShoppingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingController.swift; path = ../ShoppingController.swift; sourceTree = "<group>"; };
 		8BE291AE1CEF6EF00010D99A /* Shopping+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shopping+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8BE291AF1CEF6EF00010D99A /* Shopping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
+		8BE291B51CEF87CE0010D99A /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		8BE291B21CEF77CA0010D99A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8BE291B51CEF87CE0010D99A /* ButtonTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				8BE291881CEF618B0010D99A /* Stack.swift in Sources */,
 				8BE291B11CEF6EF00010D99A /* Shopping.swift in Sources */,
 				1A4A231D1CCA8D2C003A4350 /* AppDelegate.swift in Sources */,
+				8BE291B61CEF87CE0010D99A /* ButtonTableViewCell.swift in Sources */,
 				8BE2918A1CEF61C70010D99A /* ShoppingListTableViewController.swift in Sources */,
 				8BE291931CEF624D0010D99A /* Model.xcdatamodeld in Sources */,
 				8BE291971CEF63120010D99A /* ShoppingController.swift in Sources */,

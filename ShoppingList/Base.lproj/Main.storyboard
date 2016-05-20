@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addItem" id="tmi-hf-ERC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addItem" id="tmi-hf-ERC" customClass="ButtonTableViewCell" customModule="ShoppingList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tmi-hf-ERC" id="uRK-Nb-xdz">
@@ -37,6 +37,9 @@
                                                 <constraint firstAttribute="width" constant="25" id="C9Q-PU-oae"/>
                                             </constraints>
                                             <state key="normal" image="incomplete"/>
+                                            <connections>
+                                                <action selector="buttonTapped:" destination="tmi-hf-ERC" eventType="touchUpInside" id="OYJ-BX-o1F"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -47,6 +50,10 @@
                                         <constraint firstItem="2Ji-fs-FUy" firstAttribute="trailing" secondItem="uRK-Nb-xdz" secondAttribute="trailingMargin" id="u6p-VT-p3u"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="isCompleteButton" destination="2Ji-fs-FUy" id="JjC-Ja-YLo"/>
+                                    <outlet property="itemLabelText" destination="fuX-1P-5xE" id="dyg-7l-F7s"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

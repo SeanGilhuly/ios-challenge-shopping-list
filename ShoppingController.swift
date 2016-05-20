@@ -15,6 +15,29 @@ class ShoppingController {
     
     var items = [Shopping]()
     
+    var completedTasks: [Shopping] {
+        
+        let request = NSFetchRequest(entityName: "Item")
+        
+        let moc = Stack.sharedStack.managedObjectContext
+        
+        let tasks = (try? moc.executeFetchRequest(request)) as? [Shopping] ?? []
+        let completedTasks = tasks.filter({$0.isComplete == true})
+        return completedTasks
+    }
+    
+    var incompleteTasks: [Shopping] {
+        
+        let request = NSFetchRequest(entityName: "Item")
+        
+        let moc = Stack.sharedStack.managedObjectContext
+        
+        let tasks = (try? moc.executeFetchRequest(request)) as? [Shopping] ?? []
+        let incompleteTasks = tasks.filter({$0.isComplete == false})
+        return incompleteTasks
+    }
+    
+    
     func addItem(name: String) {
         let item = Shopping(name: name)
         items.append(item)
@@ -26,6 +49,5 @@ class ShoppingController {
         }
         items.removeAtIndex(indexOfItems)
     }
-
 }
 
