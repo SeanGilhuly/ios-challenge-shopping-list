@@ -11,6 +11,12 @@
 		1A4A23221CCA8D2C003A4350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4A23201CCA8D2C003A4350 /* Main.storyboard */; };
 		1A4A23241CCA8D2C003A4350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4A23231CCA8D2C003A4350 /* Assets.xcassets */; };
 		1A4A23271CCA8D2C003A4350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4A23251CCA8D2C003A4350 /* LaunchScreen.storyboard */; };
+		8BE291881CEF618B0010D99A /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291871CEF618B0010D99A /* Stack.swift */; };
+		8BE2918A1CEF61C70010D99A /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291891CEF61C70010D99A /* ShoppingListTableViewController.swift */; };
+		8BE291931CEF624D0010D99A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291911CEF624D0010D99A /* Model.xcdatamodeld */; };
+		8BE291971CEF63120010D99A /* ShoppingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291961CEF63120010D99A /* ShoppingController.swift */; };
+		8BE291B01CEF6EF00010D99A /* Shopping+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291AE1CEF6EF00010D99A /* Shopping+CoreDataProperties.swift */; };
+		8BE291B11CEF6EF00010D99A /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE291AF1CEF6EF00010D99A /* Shopping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		1A4A23231CCA8D2C003A4350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A4A23261CCA8D2C003A4350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A4A23281CCA8D2C003A4350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE291871CEF618B0010D99A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		8BE291891CEF61C70010D99A /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
+		8BE291921CEF624D0010D99A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		8BE291961CEF63120010D99A /* ShoppingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingController.swift; path = ../ShoppingController.swift; sourceTree = "<group>"; };
+		8BE291AE1CEF6EF00010D99A /* Shopping+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shopping+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8BE291AF1CEF6EF00010D99A /* Shopping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +65,50 @@
 			isa = PBXGroup;
 			children = (
 				1A4A231C1CCA8D2C003A4350 /* AppDelegate.swift */,
+				8BE291871CEF618B0010D99A /* Stack.swift */,
+				8BE291911CEF624D0010D99A /* Model.xcdatamodeld */,
+				8BE291B21CEF77CA0010D99A /* View */,
+				8BE2918D1CEF61E80010D99A /* View Controller */,
+				8BE291901CEF621C0010D99A /* Controller */,
+				8BE2918F1CEF61F70010D99A /* Model Object */,
 				1A4A23201CCA8D2C003A4350 /* Main.storyboard */,
 				1A4A23231CCA8D2C003A4350 /* Assets.xcassets */,
 				1A4A23251CCA8D2C003A4350 /* LaunchScreen.storyboard */,
 				1A4A23281CCA8D2C003A4350 /* Info.plist */,
 			);
 			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		8BE2918D1CEF61E80010D99A /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BE291891CEF61C70010D99A /* ShoppingListTableViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		8BE2918F1CEF61F70010D99A /* Model Object */ = {
+			isa = PBXGroup;
+			children = (
+				8BE291AE1CEF6EF00010D99A /* Shopping+CoreDataProperties.swift */,
+				8BE291AF1CEF6EF00010D99A /* Shopping.swift */,
+			);
+			name = "Model Object";
+			sourceTree = "<group>";
+		};
+		8BE291901CEF621C0010D99A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BE291961CEF63120010D99A /* ShoppingController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8BE291B21CEF77CA0010D99A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE291881CEF618B0010D99A /* Stack.swift in Sources */,
+				8BE291B11CEF6EF00010D99A /* Shopping.swift in Sources */,
 				1A4A231D1CCA8D2C003A4350 /* AppDelegate.swift in Sources */,
+				8BE2918A1CEF61C70010D99A /* ShoppingListTableViewController.swift in Sources */,
+				8BE291931CEF624D0010D99A /* Model.xcdatamodeld in Sources */,
+				8BE291971CEF63120010D99A /* ShoppingController.swift in Sources */,
+				8BE291B01CEF6EF00010D99A /* Shopping+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +338,23 @@
 				1A4A232D1CCA8D2C003A4350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8BE291911CEF624D0010D99A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8BE291921CEF624D0010D99A /* Model.xcdatamodel */,
+			);
+			currentVersion = 8BE291921CEF624D0010D99A /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1A4A23111CCA8D2C003A4350 /* Project object */;
 }
