@@ -9,17 +9,17 @@
         <!--Shopping List:-->
         <scene sceneID="VsP-Z6-9h4">
             <objects>
-                <tableViewController id="lCk-4c-Sb4" sceneMemberID="viewController">
+                <tableViewController id="lCk-4c-Sb4" customClass="ItemListTableViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1LO-Oz-szC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kuz-zJ-ejW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="kuz-zJ-ejW" customClass="ButtonTableViewCell" customModule="ShoppingList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kuz-zJ-ejW" id="JTk-SG-zJ7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c6-NT-7B4">
@@ -44,6 +44,9 @@
                                                 <constraint firstAttribute="width" constant="40" id="Lsx-Bg-WUJ"/>
                                             </constraints>
                                             <state key="normal" image="incomplete"/>
+                                            <connections>
+                                                <action selector="buttonTapped:" destination="kuz-zJ-ejW" eventType="touchUpInside" id="AHS-2s-VaH"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -58,6 +61,11 @@
                                         <constraint firstItem="Gfm-xo-JuZ" firstAttribute="top" secondItem="2c6-NT-7B4" secondAttribute="bottom" id="qd3-Vd-xXO"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="isCompleteButton" destination="7vb-to-CLQ" id="y3T-PU-ToS"/>
+                                    <outlet property="itemDescriptionLabel" destination="Gfm-xo-JuZ" id="6uE-r8-jtO"/>
+                                    <outlet property="nameLabel" destination="2c6-NT-7B4" id="3kL-LL-gXG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,7 +74,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Shopping List:" id="sUG-ox-SyX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zIS-4t-UkD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zIS-4t-UkD">
+                            <connections>
+                                <action selector="addItem:" destination="lCk-4c-Sb4" id="Tb8-ME-xBF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJa-6M-pa4" userLabel="First Responder" sceneMemberID="firstResponder"/>

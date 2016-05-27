@@ -12,7 +12,7 @@ import CoreData
 
 class Item: NSManagedObject {
     
-    convenience init?(name: String, itemDescription: String, isComplete: Bool = false, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+    convenience init?(name: String, itemDescription: String?, isComplete: Bool = false, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
         guard let entity = NSEntityDescription.entityForName("Item", inManagedObjectContext: context) else {return nil}
         
