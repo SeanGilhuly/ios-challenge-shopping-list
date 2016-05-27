@@ -25,12 +25,6 @@ class ButtonTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
     // MARK: - IBActions
     
     @IBAction func buttonTapped(sender: AnyObject) {
@@ -45,11 +39,11 @@ class ButtonTableViewCell: UITableViewCell {
         updateButton(item.isComplete.boolValue)
     }
     
-    func updateButton(isIncomplete: Bool) {
-        if isIncomplete {
-            isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
-        } else {
+    func updateButton(isComplete: Bool) {
+        if isComplete {
             isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
+        } else {
+            isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
         }
     }
 }
@@ -59,3 +53,8 @@ class ButtonTableViewCell: UITableViewCell {
 protocol ButtonTableViewCellDelegate: class {
     func buttonCellButtonTapped(cell: ButtonTableViewCell)
 }
+
+
+
+
+

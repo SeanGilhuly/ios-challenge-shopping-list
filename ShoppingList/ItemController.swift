@@ -15,7 +15,7 @@ class ItemController {
     
     static let sharedController = ItemController()
     
-    //MARK: - Properties and Initializors
+    //MARK: - Properties and Initializor
     
     let fetchedResultsController: NSFetchedResultsController
     

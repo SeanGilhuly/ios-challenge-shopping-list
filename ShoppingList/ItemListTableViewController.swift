@@ -57,12 +57,11 @@ class ItemListTableViewController: UITableViewController, ButtonTableViewCellDel
             guard let name = nameTextField?.text, itemDescription = itemDescriptionTextField?.text where name.characters.count > 0 && itemDescription.characters.count > 0 else { return }
             ItemController.sharedController.addItem(name, itemDescription: itemDescription)
         }
+        
         alertController.addAction(cancelAction)
         alertController.addAction(createAction)
         
         presentViewController(alertController, animated: true, completion: nil)
-        
-        
     }
 
 
@@ -100,9 +99,9 @@ class ItemListTableViewController: UITableViewController, ButtonTableViewCellDel
                 return nil
         }
         if index == 0 {
-            return "complete"
+            return "Incomplete"
         } else {
-            return "incomplete"
+            return "Complete"
         }
     }
 
