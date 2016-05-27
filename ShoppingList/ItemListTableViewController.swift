@@ -54,7 +54,7 @@ class ItemListTableViewController: UITableViewController, ButtonTableViewCellDel
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         let createAction = UIAlertAction(title: "Add", style: .Default) { (_) in
-            guard let name = nameTextField?.text, itemDescription = itemDescriptionTextField?.text where name.characters.count > 0 && itemDescription.characters.count > 0 else { return }
+            guard let name = nameTextField?.text, itemDescription = itemDescriptionTextField?.text else { return }
             ItemController.sharedController.addItem(name, itemDescription: itemDescription)
         }
         
@@ -105,7 +105,6 @@ class ItemListTableViewController: UITableViewController, ButtonTableViewCellDel
         }
     }
 
-    // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
@@ -113,11 +112,11 @@ class ItemListTableViewController: UITableViewController, ButtonTableViewCellDel
                 return
             }
             ItemController.sharedController.removeItem(item)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
 }
 
+// MARK: - NSFetchedResultsControllerDelegate
 
 extension ItemListTableViewController: NSFetchedResultsControllerDelegate {
     
@@ -158,5 +157,3 @@ extension ItemListTableViewController: NSFetchedResultsControllerDelegate {
         tableView.endUpdates()
     }
 }
-
-

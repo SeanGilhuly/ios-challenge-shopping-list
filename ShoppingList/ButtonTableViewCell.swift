@@ -53,8 +53,3 @@ class ButtonTableViewCell: UITableViewCell {
 protocol ButtonTableViewCellDelegate: class {
     func buttonCellButtonTapped(cell: ButtonTableViewCell)
 }
-
-
-
-
-
